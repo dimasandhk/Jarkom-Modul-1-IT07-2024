@@ -1,6 +1,6 @@
 # Jarkom Modul 1 2024 IT07
 - Dimas Andhika Diputra 5027231074
-- Kharisma Fahrun Nisa 5027231086?
+- Kharisma Fahrun Nisa 5027231086
 
 ## Challenge Advance Sanity Check
 <img src="./images/1.png" />
@@ -110,6 +110,7 @@ lalu setelah itu saya ubah sedikit kode pythonnya agar cara menjalankannya tidak
 <img src="./images/HASIL77.png" />
 
 didapat dari hasil tersebut yang mengandung info adalah ATP.png, EH.png, dan KJK.png
+
 
 ## Challenge FTP login
 <img src="./images/hasil88.png" />
