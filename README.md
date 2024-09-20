@@ -110,3 +110,141 @@ lalu setelah itu saya ubah sedikit kode pythonnya agar cara menjalankannya tidak
 <img src="./images/HASIL77.png" />
 
 didapat dari hasil tersebut yang mengandung info adalah ATP.png, EH.png, dan KJK.png
+
+## Challenge FTP login
+<img src="./images/hasil88.png" />
+Untuk semua pertanyaan ada di tcp stream ke 4 di mana terdapat log user dan password saat sukses login
+
+```
+220 (vsFTPd 3.0.3)
+OPTS UTF8 ON
+200 Always in UTF8 mode.
+USER orange
+331 Please specify the password.
+PASS heather
+530 Login incorrect.
+USER nicole
+331 Please specify the password.
+PASS ginger
+530 Login incorrect.
+USER sn34ky
+331 Please specify the password.
+PASS sup3rsn1ff3r
+230 Login successful.
+PORT 172,21,80,1,253,130
+200 PORT command successful. Consider using PASV.
+STOR g0tcha.cpp
+150 Ok to send data.
+226 Transfer complete.
+QUIT
+221 Goodbye.
+```
+
+## Challenge Surprise
+<img src="./images/hasil99.png" />
+untuk pertanyaan pertama dan kedua masih didapat dari tcp stream 4
+
+```
+220 (vsFTPd 3.0.3)
+OPTS UTF8 ON
+200 Always in UTF8 mode.
+USER orange
+331 Please specify the password.
+PASS heather
+530 Login incorrect.
+USER nicole
+331 Please specify the password.
+PASS ginger
+530 Login incorrect.
+USER sn34ky
+331 Please specify the password.
+PASS sup3rsn1ff3r
+230 Login successful.
+PORT 172,21,80,1,253,130
+200 PORT command successful. Consider using PASV.
+STOR g0tcha.cpp
+150 Ok to send data.
+226 Transfer complete.
+QUIT
+221 Goodbye.
+```
+
+untuk pertanyaan ke 3, pada stream tcp 5 terdapat file c++ yang mana jika dijalankan akan menghasilkan:
+
+<img src="./images/81.png" />
+
+## Challenge Corporate Breach
+<img src="./images/hasil10.png" />
+Untuk pertanyaan pertama ada di tcp stream 0
+
+```
+POST / HTTP/1.1
+Host: 172.21.88.207
+User-Agent: curl/8.8.0
+Accept: */*
+Content-Length: 127
+Content-Type: application/x-www-form-urlencoded
+
+Hello, my name is Nakhimov and I'm here trying to get in to your system. I'm sorry, but your system is too weak for me. I'm in.HTTP/1.1 404 Not Found
+Server: nginx/1.26.0
+Date: Wed, 18 Sep 2024 04:08:27 GMT
+Content-Type: text/html
+Content-Length: 153
+Connection: keep-alive
+
+<html>
+<head><title>404 Not Found</title></head>
+<body>
+<center><h1>404 Not Found</h1></center>
+<hr><center>nginx/1.26.0</center>
+</body>
+</html>
+```
+
+dan untuk 2 pertanyaan terakhir saya cek manual yang POST ke index.php nya tidak ada response invalid password yaitu tcp stream 207
+
+```
+POST /index.php HTTP/1.1
+Host: 172.21.88.207:800
+User-Agent: python-requests/2.32.3
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+Content-Length: 54
+Content-Type: application/x-www-form-urlencoded
+
+email=jarkomsupport%40gmail.com&password=j4rk0mg4c0rbgHTTP/1.1 200 OK
+Host: 172.21.88.207:800
+Date: Wed, 18 Sep 2024 04:09:14 GMT
+Connection: close
+X-Powered-By: PHP/8.2.21
+Set-Cookie: PHPSESSID=994a8fjscc6fn8pmrigbgmraol; path=/
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate
+Pragma: no-cache
+Refresh: 2; URL=upload.php
+Content-type: text/html; charset=UTF-8
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
